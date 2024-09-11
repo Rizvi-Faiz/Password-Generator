@@ -2,8 +2,6 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
 
-
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -11,8 +9,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-      >
+      <head>
+        <link rel="icon" href="/favicon.png" type="image/png" />
+        <title>Password Generator</title>
+        <meta name="description" content="A modern password generator and strength checker app." />
+      </head>
+      <body>
         {children}
       </body>
     </html>
